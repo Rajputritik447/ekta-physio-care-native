@@ -1,15 +1,15 @@
+
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const Header = () => {
+const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    // This will be implemented later with React Navigation
-    console.log('Scrolling to', sectionId);
+  const handlePress = (sectionId: string) => {
+    scrollToSection(sectionId);
     setIsMenuOpen(false);
-  };
+  }
 
   return (
     <View style={styles.header}>
@@ -50,25 +50,25 @@ const Header = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <View style={styles.mobileMenu}>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('home')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('home')}>
             <Text>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('about')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('about')}>
             <Text>About</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('services')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('services')}>
             <Text>Services</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('treatments')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('treatments')}>
             <Text>Treatments</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('testimonials')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('testimonials')}>
             <Text>Testimonials</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.mobileNavLink} onPress={() => scrollToSection('contact')}>
+          <TouchableOpacity style={styles.mobileNavLink} onPress={() => handlePress('contact')}>
             <Text>Contact</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.mobileButton]} onPress={() => scrollToSection('appointment')}>
+          <TouchableOpacity style={[styles.button, styles.mobileButton]} onPress={() => handlePress('appointment')}>
             <Text style={styles.buttonText}>Book Appointment</Text>
           </TouchableOpacity>
         </View>

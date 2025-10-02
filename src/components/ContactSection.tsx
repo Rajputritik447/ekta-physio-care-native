@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const ContactSection = () => {
+const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const openMap = () => {
     const address = '123 Medical Plaza, Bandra West, Mumbai - 400050';
     const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -118,7 +119,7 @@ const ContactSection = () => {
             <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => openPhone('+919876543210')}>
                 <Text style={[styles.buttonText, styles.primaryButtonText]}>Call Now</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.button, styles.secondaryButton]}>
+            <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => scrollToSection('appointment')}>
                 <Text style={[styles.buttonText, styles.secondaryButtonText]}>Book Online</Text>
             </TouchableOpacity>
         </View>

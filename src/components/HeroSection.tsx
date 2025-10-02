@@ -1,14 +1,11 @@
+
 import React from 'react';
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 const heroImage = require('../assets/hero-physiotherapy.jpg');
 
-const HeroSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    // This will be implemented later with React Navigation
-    console.log('Scrolling to', sectionId);
-  };
+const HeroSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
 
   return (
     <ImageBackground source={heroImage} style={styles.heroContainer} imageStyle={styles.heroImage}>

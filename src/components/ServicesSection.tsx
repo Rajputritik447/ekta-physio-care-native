@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const ServicesSection = () => {
+const ServicesSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const services = [
     {
       icon: 'activity',
@@ -88,7 +89,7 @@ const ServicesSection = () => {
               ))}
             </View>
 
-            <TouchableOpacity style={styles.learnMoreButton}>
+            <TouchableOpacity style={styles.learnMoreButton} onPress={() => scrollToSection('treatments')}>
               <Text style={styles.learnMoreButtonText}>Learn More</Text>
             </TouchableOpacity>
           </View>
@@ -102,10 +103,10 @@ const ServicesSection = () => {
           and receive a personalized treatment recommendation.
         </Text>
         <View style={styles.ctaButtonContainer}>
-          <TouchableOpacity style={[styles.button, styles.primaryButton]}>
+          <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => scrollToSection('appointment')}>
             <Text style={[styles.buttonText, styles.primaryButtonText]}>Schedule Consultation</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.secondaryButton]}>
+          <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => scrollToSection('contact')}>
             <Text style={[styles.buttonText, styles.secondaryButtonText]}>Contact Us</Text>
           </TouchableOpacity>
         </View>

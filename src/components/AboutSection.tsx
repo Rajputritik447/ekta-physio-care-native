@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 const doctorImage = require('../assets/doctor-portrait.jpg');
 
-const AboutSection = () => {
+const AboutSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const qualifications = [
     "BPT - Bachelor of Physiotherapy",
     "MPT - Master of Physiotherapy (Orthopedics)",
@@ -101,7 +102,7 @@ const AboutSection = () => {
           Take the first step towards better health. Schedule a consultation 
           to discuss your condition and create a personalized treatment plan.
         </Text>
-        <TouchableOpacity style={styles.ctaButton}>
+        <TouchableOpacity style={styles.ctaButton} onPress={() => scrollToSection('appointment')}>
           <Text style={styles.ctaButtonText}>Book Consultation Now</Text>
         </TouchableOpacity>
       </View>
