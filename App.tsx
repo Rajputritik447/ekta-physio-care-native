@@ -35,8 +35,8 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView style={styles.container} ref={scrollViewRef}>
         <Header scrollToSection={scrollToSection} />
+      <ScrollView style={styles.container} ref={scrollViewRef}>
         <View onLayout={(event) => handleLayout('home', event)}><HeroSection scrollToSection={scrollToSection} /></View>
         <View onLayout={(event) => handleLayout('about', event)}><AboutSection scrollToSection={scrollToSection} /></View>
         <View onLayout={(event) => handleLayout('services', event)}><ServicesSection scrollToSection={scrollToSection} /></View>

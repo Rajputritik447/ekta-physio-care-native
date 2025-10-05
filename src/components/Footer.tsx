@@ -9,9 +9,9 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
     <View style={styles.footerContainer}>
       <View style={styles.mainContent}>
         <View style={styles.clinicInfo}>
-          <Text style={styles.clinicName}>Ekta Physio Care</Text>
+          <Text style={styles.clinicName}>Lakshay Physio Care</Text>
           <Text style={styles.clinicDescription}>
-            Leading physiotherapy clinic in Mumbai, dedicated to helping 
+            Leading physiotherapy clinic in Meerut, dedicated to helping 
             patients recover from injuries, manage pain, and improve their 
             quality of life through personalized treatment plans.
           </Text>
@@ -21,11 +21,11 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
           </View>
           <View style={styles.contactInfo}>
             <Icon name="mail" size={16} color="#FFD700" />
-            <Text style={styles.contactText}>dr.ekta@physiocare.com</Text>
+            <Text style={styles.contactText}>dr.Lakshay@physiocare.com</Text>
           </View>
           <View style={styles.contactInfo}>
             <Icon name="map-pin" size={16} color="#FFD700" />
-            <Text style={styles.contactText}>Bandra West, Mumbai - 400050</Text>
+            <Text style={styles.contactText}> Meerut - 250002</Text>
           </View>
         </View>
 
@@ -33,7 +33,7 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
           <View style={styles.quickLinks}>
             <Text style={styles.linksTitle}>Quick Links</Text>
             <TouchableOpacity onPress={() => scrollToSection('home')}><Text style={styles.link}>Home</Text></TouchableOpacity>
-            <TouchableOpacity onPress={() => scrollToSection('about')}><Text style={styles.link}>About Dr. Ekta</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => scrollToSection('about')}><Text style={styles.link}>About Dr. Lakshay</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => scrollToSection('services')}><Text style={styles.link}>Our Services</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => scrollToSection('treatments')}><Text style={styles.link}>Treatments</Text></TouchableOpacity>
             <TouchableOpacity onPress={() => scrollToSection('testimonials')}><Text style={styles.link}>Patient Reviews</Text></TouchableOpacity>
@@ -70,7 +70,7 @@ const Footer = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
       </View>
 
       <View style={styles.copyrightContainer}>
-        <Text style={styles.copyrightText}>© 2024 Ekta Physio Care. All rights reserved.</Text>
+        <Text style={styles.copyrightText}>© 2024 Lakshay Physio Care. All rights reserved.</Text>
         <View style={styles.madeWithContainer}>
             <Text style={styles.copyrightText}>Made with </Text>
             <Icon name="heart" size={16} color="red" />

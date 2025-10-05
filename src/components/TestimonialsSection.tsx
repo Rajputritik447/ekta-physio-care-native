@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       condition: "Chronic Back Pain",
       rating: 5,
       image: "PS",
-      testimonial: "Dr. Ekta completely transformed my life. I had been suffering from chronic back pain for 3 years, and within 6 weeks of treatment, I was pain-free. Her approach is professional yet caring, and she explains everything clearly.",
+      testimonial: "Dr. Lakshay completely transformed my life. I had been suffering from chronic back pain for 3 years, and within 6 weeks of treatment, I was pain-free. Her approach is professional yet caring, and she explains everything clearly.",
       duration: "Treated for 6 weeks"
     },
     {
@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
       condition: "Post-Surgery Knee Recovery",
       rating: 5,
       image: "RK",
-      testimonial: "After my knee surgery, I was worried about recovery. Dr. Ekta's rehabilitation program was excellent. She guided me through every step, and now I'm back to playing cricket! Highly recommend her expertise.",
+      testimonial: "After my knee surgery, I was worried about recovery. Dr. Lakshay's rehabilitation program was excellent. She guided me through every step, and now I'm back to playing cricket! Highly recommend her expertise.",
       duration: "Treated for 10 weeks"
     },
     {
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       condition: "Frozen Shoulder",
       rating: 5,
       image: "AD",
-      testimonial: "I couldn't lift my arm above my head for months. Dr. Ekta's treatment plan was thorough and effective. Her manual therapy techniques and exercises helped me regain full range of motion. Grateful for her care!",
+      testimonial: "I couldn't lift my arm above my head for months. Dr. Lakshay's treatment plan was thorough and effective. Her manual therapy techniques and exercises helped me regain full range of motion. Grateful for her care!",
       duration: "Treated for 12 weeks"
     },
   ];
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
         </View>
         <Text style={styles.overallRatingText}>5.0 / 5.0</Text>
         <Text style={styles.reviewsText}>Based on 200+ patient reviews</Text>
-        <Text style={styles.recommendationText}>100% of patients would recommend Dr. Ekta</Text>
+        <Text style={styles.recommendationText}>100% of patients would recommend Dr. Lakshay</Text>
       </View>
 
       <View>

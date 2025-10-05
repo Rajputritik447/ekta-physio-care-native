@@ -21,13 +21,13 @@ const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
               <Icon name="phone" size={16} color="white" />
               <Text style={styles.contactText}>+91 98765 43210</Text>
             </View>
-            <View style={styles.contactInfo}>
+            {/* <View style={styles.contactInfo}>
               <Icon name="mail" size={16} color="white" />
-              <Text style={styles.contactText}>dr.ekta@physiocare.com</Text>
-            </View>
+              <Text style={styles.contactText}>dr.Lakshay@physiocare.com</Text>
+            </View> */}
             <View style={styles.contactInfo}>
               <Icon name="map-pin" size={16} color="white" />
-              <Text style={styles.contactText}>Mumbai, Maharashtra</Text>
+              <Text style={styles.contactText}>Meerut, Uttar Pradesh</Text>
             </View>
           </View>
         </View>
@@ -37,7 +37,7 @@ const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
       <View style={styles.mainNav}>
         <View style={styles.container}>
           <View style={styles.mainNavContent}>
-            <Text style={styles.logo}>Ekta Physio Care</Text>
+            <Text style={styles.logo}>Lakshay Physio Care</Text>
 
             {/* Mobile menu button */}
             <TouchableOpacity onPress={() => setIsMenuOpen(!isMenuOpen)}>
@@ -90,9 +90,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   topBarContent: {
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'flex-start',
     paddingVertical: 8,
+    justifyContent: 'space-between',
+    marginTop : 40,
   },
   contactInfo: {
     flexDirection: 'row',

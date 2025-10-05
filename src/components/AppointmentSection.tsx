@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { sendEmail } from './EmailService';
 
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
@@ -15,28 +16,32 @@ const AppointmentSection = () => {
 
   const handleSubmit = () => {
     if (!formData.name || !formData.phone || !formData.condition) {
-      Alert.alert(
-        "Please fill in required fields",
-        "Name, phone, and condition are required to book an appointment."
-      );
+      Alert.alert('Validation', 'Please fill all required fields.');
       return;
     }
-
-    Alert.alert(
-      "Appointment Request Submitted!",
-      "We'll contact you within 24 hours to confirm your appointment."
-    );
-
+  
+    // Send data via Google Apps Script
+    sendEmail({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      preferredDate: formData.preferredDate,
+      preferredTime: formData.preferredTime,
+      message: formData.message,
+    });
+  
+    // Optionally, reset form
     setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      condition: "",
-      preferredDate: "",
-      preferredTime: "",
-      message: ""
+      name: '',
+      email: '',
+      phone: '',
+      condition: '',
+      preferredDate: '',
+      preferredTime: '',
+      message: '',
     });
   };
+  
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -48,7 +53,7 @@ const AppointmentSection = () => {
         <Text style={styles.title}>Book Your Appointment</Text>
         <Text style={styles.subtitle}>
           Take the first step towards recovery. Schedule your consultation 
-          with Dr. Ekta Rajput today and start your journey to better health.
+          with Dr. Lakshay Yadav today and start your journey to better health.
         </Text>
       </View>
 
@@ -139,7 +144,7 @@ const AppointmentSection = () => {
               <Icon name="mail" size={24} color="#007AFF" />
               <View style={styles.contactTextContainer}>
                   <Text style={styles.contactLabel}>Email</Text>
-                  <Text style={styles.contactValue}>dr.ekta@physiocare.com</Text>
+                  <Text style={styles.contactValue}>dr.Lakshay@physiocare.com</Text>
                   <Text style={styles.contactMeta}>We'll respond within 24 hours</Text>
               </View>
           </View>
@@ -147,7 +152,7 @@ const AppointmentSection = () => {
               <Icon name="map-pin" size={24} color="#007AFF" />
               <View style={styles.contactTextContainer}>
                   <Text style={styles.contactLabel}>Address</Text>
-                  <Text style={styles.contactValue}>123 Medical Plaza, Bandra West, Mumbai - 400050</Text>
+                  <Text style={styles.contactValue}>123 Medical Plaza,  Meerut - 250002</Text>
               </View>
           </View>
           <View style={styles.contactRow}>

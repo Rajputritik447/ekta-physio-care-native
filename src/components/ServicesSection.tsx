@@ -99,7 +99,7 @@ const ServicesSection = ({ scrollToSection }: { scrollToSection: (sectionId: str
       <View style={styles.ctaCard}>
         <Text style={styles.ctaTitle}>Not Sure Which Service You Need?</Text>
         <Text style={styles.ctaSubtitle}>
-          Book a consultation with Dr. Ekta Rajput to discuss your condition 
+          Book a consultation with Dr. Lakshay Yadav to discuss your condition 
           and receive a personalized treatment recommendation.
         </Text>
         <View style={styles.ctaButtonContainer}>

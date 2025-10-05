@@ -17,7 +17,7 @@ const HeroSection = ({ scrollToSection }: { scrollToSection: (sectionId: string)
             <Text style={styles.certifiedText}>Certified Physiotherapist</Text>
           </View>
 
-          <Text style={styles.title}>Dr. Ekta Rajput</Text>
+          <Text style={styles.title}>Dr. Lakshay Yadav</Text>
           <Text style={styles.subtitle}>Physiotherapy Expert</Text>
 
           <Text style={styles.description}>
@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   title: {
-    fontSize: 48,
+    fontSize: 43,
     fontWeight: 'bold',
     color: 'white',
     marginBottom: 8,
-    textAlign: 'center',
+    // textAlign: 'center',
   },
   subtitle: {
     fontSize: 32,

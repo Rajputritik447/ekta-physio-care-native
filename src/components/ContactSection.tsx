@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Feather';
 
 const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const openMap = () => {
-    const address = '123 Medical Plaza, Bandra West, Mumbai - 400050';
+    const address = 'Godwin,Meerut - 250002';
     const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
     Linking.openURL(url);
   };
@@ -19,7 +19,7 @@ const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: stri
       <View style={styles.header}>
         <Text style={styles.title}>Visit Our Clinic</Text>
         <Text style={styles.subtitle}>
-          Conveniently located in the heart of Mumbai with easy access 
+          Conveniently located in the heart of Meerut with easy access 
           by public transport. We're here to help you on your recovery journey.
         </Text>
       </View>
@@ -30,7 +30,7 @@ const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: stri
             <Icon name="map-pin" size={24} color="#007AFF" />
             <View style={styles.contactTextContainer}>
                 <Text style={styles.contactLabel}>Address</Text>
-                <Text style={styles.contactValue}>Ekta Physio Care Clinic, 123 Medical Plaza, 2nd Floor, Linking Road, Bandra West, Mumbai - 400050, Maharashtra</Text>
+                <Text style={styles.contactValue}>PhysioCare Clinic, 123 Medical Plaza, 2nd Floor, Linking Road,  Meerut - 250002, Uttar Pradesh</Text>
             </View>
         </View>
         <View style={styles.contactRow}>
@@ -45,8 +45,8 @@ const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: stri
             <Icon name="mail" size={24} color="#007AFF" />
             <View style={styles.contactTextContainer}>
                 <Text style={styles.contactLabel}>Email</Text>
-                <Text style={styles.contactValue}>dr.ekta@physiocare.com</Text>
-                <Text style={styles.contactValue}>info@ektaphysiocare.com</Text>
+                <Text style={styles.contactValue}>contact@physiocare.com</Text>
+                <Text style={styles.contactValue}>info@physiocare.com</Text>
             </View>
         </View>
         <View style={styles.contactRow}>
@@ -89,7 +89,7 @@ const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: stri
         <View style={styles.mapPlaceholder}>
             <Icon name="map" size={64} color="#007AFF" />
             <Text style={styles.mapText}>Interactive Map</Text>
-            <Text style={styles.mapAddress}>123 Medical Plaza, Bandra West, Mumbai - 400050</Text>
+            <Text style={styles.mapAddress}>123 Medical Plaza,  Meerut - 250002</Text>
             <TouchableOpacity style={styles.mapButton} onPress={openMap}>
                 <Text style={styles.mapButtonText}>Open in Google Maps</Text>
             </TouchableOpacity>
@@ -114,7 +114,7 @@ const ContactSection = ({ scrollToSection }: { scrollToSection: (sectionId: stri
 
       <View style={[styles.card, styles.ctaCard]}>
         <Text style={[styles.cardTitle, {color: 'white'}]}>Ready to Visit?</Text>
-        <Text style={styles.ctaText}>We're conveniently located in Bandra West with easy access from all parts of Mumbai. Call us now to book your appointment or get directions to our clinic.</Text>
+        <Text style={styles.ctaText}>We're conveniently located in Bandra West with easy access from all parts of Meerut. Call us now to book your appointment or get directions to our clinic.</Text>
         <View style={styles.ctaButtonContainer}>
             <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => openPhone('+919876543210')}>
                 <Text style={[styles.buttonText, styles.primaryButtonText]}>Call Now</Text>

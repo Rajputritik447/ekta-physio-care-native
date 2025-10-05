@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const doctorImage = require('../assets/doctor-portrait.jpg');
+const doctorImage = require('../assets/hero_man.png');
 
 const AboutSection = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   const qualifications = [
@@ -26,7 +26,7 @@ const AboutSection = ({ scrollToSection }: { scrollToSection: (sectionId: string
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>About Dr. Ekta Rajput</Text>
+        <Text style={styles.title}>About Dr. Lakshay Yadav</Text>
         <Text style={styles.subtitle}>
           Dedicated to helping patients achieve optimal health through evidence-based 
           physiotherapy treatments and personalized care.
@@ -35,7 +35,7 @@ const AboutSection = ({ scrollToSection }: { scrollToSection: (sectionId: string
 
       <View style={styles.doctorCard}>
         <Image source={doctorImage} style={styles.doctorImage} />
-        <Text style={styles.doctorName}>Dr. Ekta Rajput</Text>
+        <Text style={styles.doctorName}>Dr. Lakshay Yadav</Text>
         <Text style={styles.doctorSpecialty}>Physiotherapy Specialist</Text>
         <Text style={styles.doctorQuote}>
           "My mission is to help every patient regain their mobility, 
@@ -63,7 +63,7 @@ const AboutSection = ({ scrollToSection }: { scrollToSection: (sectionId: string
           <Text style={styles.cardTitle}>Professional Background</Text>
         </View>
         <Text style={styles.cardText}>
-          Dr. Ekta Rajput is a highly qualified physiotherapist with over 8 years 
+          Dr. Lakshay Yadav is a highly qualified physiotherapist with over 8 years 
           of experience in treating various musculoskeletal and neurological conditions. 
           She completed her Master's in Physiotherapy with specialization in Orthopedics 
           and has since dedicated her career to helping patients recover from injuries 

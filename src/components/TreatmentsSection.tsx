@@ -33,14 +33,15 @@ const TreatmentsSection = () => {
   ];
 
   const getCategoryStyle = (category: string) => {
-    const styles = {
+    const styles: Record<string, { backgroundColor: string; color: string }> = {
       "Orthopedic": { backgroundColor: 'rgba(0, 122, 255, 0.1)', color: '#007AFF' },
       "Sports": { backgroundColor: 'rgba(255, 215, 0, 0.1)', color: '#FFD700' },
       "Neurological": { backgroundColor: 'rgba(128, 0, 128, 0.1)', color: 'purple' },
     };
+  
     return styles[category] || { backgroundColor: '#eee', color: '#333' };
   };
-
+  
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
