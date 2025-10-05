@@ -25,6 +25,7 @@ const AppointmentSection = () => {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
+      condition: formData.condition,
       preferredDate: formData.preferredDate,
       preferredTime: formData.preferredTime,
       message: formData.message,
